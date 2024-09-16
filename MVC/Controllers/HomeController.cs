@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MVC.Data;
 using MVC.Models;
 using System.Diagnostics;
 
@@ -9,10 +10,12 @@ namespace MVC.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private ApplicationDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
@@ -23,7 +26,9 @@ namespace MVC.Controllers
         [Authorize]
         public IActionResult Privacy()
         {
-            string user =
+            _logger.LogWarning("PRIVACY");
+
+           string user =
                 User.Identity.IsAuthenticated ? User.Identity.Name : "nepøihlášený";
 
             ViewData["user"] = user;

@@ -3,10 +3,13 @@ using MinimalAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<GreetingService>();
 
 // Add services to the container.
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 
@@ -15,7 +18,7 @@ app.UseHttpsRedirection();
 
 app.MapGet("/", () => HelloMethods.HelloWorld());
 
-app.MapGet("/hello/{name}/narozeni/{dob}", (string name) => HelloMethods.HelloWorld(name));
+app.MapGet("/hello/{name}", (string name, GreetingService gs) => gs.Hello() + " " + name);
 
 app.Run();
 
