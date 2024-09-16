@@ -33,13 +33,18 @@ namespace MVC.Controllers
 
             ViewData["user"] = user;
 
-            PrivacyPolicy privacyPolicy = new ()
-            {
-                ValidFrom = new DateOnly(2024, 1, 1),
-                Text = "Lorem ipsum,....."
-            };
+            var privacyPolicy = _db.PrivacyPolicies.OrderByDescending(x => x.ValidFrom).FirstOrDefault();
 
-            return View(privacyPolicy);
+            if (privacyPolicy is null)
+            {
+                privacyPolicy = new PrivacyPolicy()
+                {
+                    ValidFrom = new DateOnly(2024, 1, 1),
+                    Text = "default"
+                };
+            }
+
+            return View(privacyPolicy); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
