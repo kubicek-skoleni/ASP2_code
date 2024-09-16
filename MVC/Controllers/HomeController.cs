@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MVC.Models;
 using System.Diagnostics;
 
 namespace MVC.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,9 +20,13 @@ namespace MVC.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
-            return BadRequest();
+            string user =
+                User.Identity.IsAuthenticated ? User.Identity.Name : "nepøihlášený";
+
+            ViewData["user"] = user;
 
             PrivacyPolicy privacyPolicy = new ()
             {

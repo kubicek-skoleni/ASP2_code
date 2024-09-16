@@ -3,10 +3,14 @@
 @{
     ViewData["Title"] = "Privacy Policy";
     string datumod = Model.ValidFrom.ToString("dd. MM. yyyy");
+
+    string user = (string)ViewData["user"];
 }
 
 
 <h1>@ViewData["Title"]</h1>
+
+<p>uživatel: @user</p
 
 <p>Platné od: @datumod</p>
 
