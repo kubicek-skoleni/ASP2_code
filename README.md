@@ -16,3 +16,6 @@
 
 * https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-7.0
 * https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-7.0&tabs=visual-studio
+
+### Identity
+* https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-7.0&tabs=visual-studio
