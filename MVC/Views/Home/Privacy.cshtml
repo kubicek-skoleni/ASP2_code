@@ -1,0 +1,14 @@
+﻿@model PrivacyPolicy
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+    string datumod = Model.ValidFrom.ToString("dd. MM. yyyy");
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Platné od: @datumod</p>
+
+<p>@Model.Text</p>
+
