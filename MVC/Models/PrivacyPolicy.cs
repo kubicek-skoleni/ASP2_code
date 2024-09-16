@@ -8,6 +8,7 @@ namespace MVC.Models
 
         public DateOnly ValidFrom { get; set; }
 
+        [MaxLength(1000)]
         public string Text { get; set; }   
     }
 }
