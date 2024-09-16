@@ -27,7 +27,7 @@ namespace MVC.Controllers
         public IActionResult Privacy()
         {
             _logger.LogWarning("PRIVACY");
-
+                        
            string user =
                 User.Identity.IsAuthenticated ? User.Identity.Name : "nepøihlášený";
 
