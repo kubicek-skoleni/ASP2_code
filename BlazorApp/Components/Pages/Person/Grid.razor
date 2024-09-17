@@ -1,0 +1,22 @@
+﻿@page "/person/grid"
+@using Microsoft.AspNetCore.Components.QuickGrid
+@inject PeopleDataset ds
+
+
+<h3>Grid</h3>
+
+<QuickGrid Items="People">
+    <PropertyColumn Property="@(p => p.FirstName)" Sortable="true" />
+    <PropertyColumn Property="@(p => p.LastName)" Sortable="true" />
+    <PropertyColumn Property="@(p => p.Email)" Sortable="true" />
+</QuickGrid>
+
+
+@code {
+    IQueryable<Person> People;
+
+    protected override void OnInitialized()
+    {
+        People = ds.GetPeople().Take(20).AsQueryable();
+    }
+}

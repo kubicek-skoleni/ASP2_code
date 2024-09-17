@@ -1,0 +1,19 @@
+﻿@page "/person/create"
+
+@inject PeopleDataset ds
+
+<h3>Přidání nové osoby</h3>
+
+<PersonEditForm Person="person" OnSave="save" />
+
+@code {
+
+    Person person = new();
+
+
+    void save()
+    {
+        Console.WriteLine($"přidávám {person}");
+    }
+
+}

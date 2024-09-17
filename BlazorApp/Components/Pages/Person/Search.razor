@@ -1,0 +1,78 @@
+﻿@page "/person/search"
+
+@inject PeopleDataset ds
+
+﻿<div class="row g-3 align-items-center">
+    <div class="col-auto">
+        <label class="col-form-label">Hledej osoby dle emailu</label>
+    </div>
+    <div class="col-auto">
+        <InputText @bind-Value="SearchTerm" class="form-control" />
+    </div>
+    <div class="col-auto">
+        <button @(showResult ? "disabled" : "") class="btn btn-primary" @onclick="search">
+            Hledej
+        </button>
+    </div>
+</div>
+
+
+@if (showResult)
+{
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>
+                        Jméno
+                    </td>
+                    <td>
+                        Příjmení
+                    </td>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        Narozen
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var person in result)
+                {
+                    <tr>
+                        <td>
+                            @person.FirstName
+                        </td>
+                        <td>
+                            @person.LastName
+                        </td>
+                        <td>
+                            @person.Email
+                        </td>
+                        <td>
+                            @person.DateOfBirth.ToString("dd. MM. yyyy")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    string SearchTerm;
+
+    bool showResult;
+
+    List<Person> result = new();
+
+    void search()
+    {
+        result = ds.GetPeople()
+                    .Where(x => x.Email.ToLower().Contains(SearchTerm.ToLower()))
+                    .Take(20)
+                    .ToList();
+    }
+}
