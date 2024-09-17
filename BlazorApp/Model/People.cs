@@ -10,6 +10,11 @@
         public DateTime DateOfBirth { get; set; }
         public Address Address { get; set; }
         public List<Contract> Contracts { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName} {Email}";
+        }
     }
 
     public class Address

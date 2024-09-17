@@ -17,6 +17,9 @@
         <label>Email</label>
         <InputText @bind-Value="person.Email" class="form-control" />
     </div>
+    <div>
+        <button type="submit">Ulož</button>
+    </div>
 </EditForm>
 
 @code {
@@ -33,7 +36,7 @@
 
     void save()
     {
-        
+        Console.WriteLine($"ukládám {person}");
     }
 
 }
