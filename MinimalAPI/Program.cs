@@ -20,6 +20,7 @@ app.MapGet("/", () => HelloMethods.HelloWorld());
 
 app.MapGet("/hello/{name}", (string name, GreetingService gs) => gs.Hello() + " " + name);
 
+
 app.Run();
 
 
