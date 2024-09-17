@@ -9,6 +9,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped<CounterService>();
 
+builder.Services.AddScoped<PeopleDataset>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

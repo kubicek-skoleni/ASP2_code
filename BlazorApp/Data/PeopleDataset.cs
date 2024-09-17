@@ -10,7 +10,7 @@ namespace BlazorApp.Data
         {
             if(_people == null) 
             {
-                _people = JsonSerializer.Deserialize<List<Person>>(@"C:\Users\Student EN\source\repos\ASP2\dataset_people\data2024.json");
+                _people = JsonSerializer.Deserialize<List<Person>>(File.ReadAllText("data2024.json"));
             }
 
             return _people;
