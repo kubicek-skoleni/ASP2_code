@@ -4,7 +4,8 @@
 
 <h3>Výpis osob</h3>
 
-<table>
+<table class="table">
+    <thead>
     <tr>
         <td>
             Jméno
@@ -19,7 +20,10 @@
             Narozen
         </td>
     </tr>
-    @foreach(var person in ds.GetPeople().Take(50))
+    </thead>
+
+    <tbody>
+    @foreach (var person in people)
     {
         <tr>
             <td>
@@ -36,15 +40,30 @@
             </td>
         </tr>
     }
-
+    </tbody>
 </table>
+
+<div>
+    <button class="btn btn-primary" @onclick="LoadMore">Načti dalších 20</button>
+</div>
 
 
 @code {
+    List<Person> people = new();
+
+    int skip = 0;
 
     protected override void OnInitialized()
     {
-        ds.GetPeople();
+        people = ds.GetPeople().Take(20).ToList();
+        skip = 20;
+    }
+
+    void LoadMore()
+    {
+        var next20 = ds.GetPeople().Skip(skip).Take(20);
+        people.AddRange(next20);
+        skip += 20;
     }
 
 
