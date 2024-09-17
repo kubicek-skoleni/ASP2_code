@@ -1,0 +1,25 @@
+Asp.net core pipeline - co je a kde se definuje?
+	tunel, http request > http response
+	v naší aplikaci
+	middleware
+
+* Popište pár slovy a řekněte k čemu slouží:
+- MVC 
+	model view controller
+	návrhový vzor
+	3 vrstvá architektura web aplikací
+- Controller
+	zpracovává data z modelu
+	posílá data view
+	cesty / routes / url
+- View
+	.cshtml
+	šablony => html
+- Model
+	doménový model,
+	ORM,
+	data
+
+* Jak se dají přenášet data mezi Controllerem a View?
+	předání modelem - View(data) (strongly typed)
+	ViewData
