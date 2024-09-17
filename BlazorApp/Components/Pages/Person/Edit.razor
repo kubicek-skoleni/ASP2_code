@@ -1,0 +1,21 @@
+﻿@page "/person/edit/{id:int}"
+
+@inject PeopleDataset ds
+
+<h3>Editace osoby - @person.FirstName @person.LastName</h3>
+
+
+
+@code {
+
+    [Parameter]
+    public int id { get; set; }
+
+    Person person = new();
+
+    protected override void OnInitialized()
+    {
+        person = ds.GetPeople().ElementAt(id);
+    }
+
+}
