@@ -46,3 +46,11 @@ https://blazor-university.com/
 ### Blazor School
 https://blazorschool.com/
 https://github.com/Blazor-School
+
+## MS Dev Blogs
+
+https://devblogs.microsoft.com
+
+### ASP.NET Core updates in .NET 8 Release Candidate 1
+
+https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#blazor
