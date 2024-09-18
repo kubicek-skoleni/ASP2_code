@@ -69,10 +69,6 @@ https://devblogs.microsoft.com/dotnet/author/danroth27/ - dotnet release/updates
 https://twitter.com/davidfowl
 https://github.com/davidfowl
 
-
-### Background tasks
-* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-8.0&tabs=visual-studio
-
 ### Steve Sanderson
 https://twitter.com/stevensanderson
 (blazor fragments : https://twitter.com/stevensanderson/status/1696449142573113542 )
@@ -80,3 +76,28 @@ https://twitter.com/stevensanderson
 ### Jimmy Engström #Blazor
 https://engstromjimmy.com/
 
+
+----
+
+### Identity
+* https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-7.0&tabs=visual-studio
+
+### Middleware
+* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0
+* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0
+
+### Minimal APIs
+* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0
+
+### Errors / Logging
+* Error handling - https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-7.0
+* Logging - https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0
+
+### Http Context 
+* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/use-http-context?view=aspnetcore-7.0
+
+### Background tasks
+* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-8.0&tabs=visual-studio
+
+## Visual Studio Community
+https://visualstudio.microsoft.com/downloads/
