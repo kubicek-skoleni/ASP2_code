@@ -18,7 +18,7 @@ app.UseHttpsRedirection();
 
 app.MapGet("/", () => HelloMethods.HelloWorld());
 
-app.MapGet("/hello/{name}", (string name, GreetingService gs) => gs.Hello() + " " + name);
+app.MapGet("/hello/{name}", (string name, GreetingService gs, HttpContext http) => gs.Hello() + " ");
 
 
 app.Run();
