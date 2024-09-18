@@ -30,3 +30,19 @@
 
 ### Dependency Injection
 * https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-7.0
+
+# Blazor
+
+# Blazor
+
+## Docs
+
+### MS Docs
+https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0
+
+### Blazor Univerzity
+https://blazor-university.com/
+
+### Blazor School
+https://blazorschool.com/
+https://github.com/Blazor-School
