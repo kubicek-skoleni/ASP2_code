@@ -16,5 +16,7 @@ namespace BlazorApp.Data
 
         public DbSet<Contract> Contracts { get; set; }
 
+        public DbSet<Email> Emails { get; set; }
+
     }
 }
