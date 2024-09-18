@@ -1,3 +1,6 @@
+// https://learncloudnative.com/
+
+
 # ASP2
 
 # asp.net core
@@ -30,3 +33,46 @@
 
 ### Dependency Injection
 * https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-7.0
+
+# Blazor
+
+# Blazor
+
+## Docs
+
+### MS Docs
+https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0
+
+### Blazor Univerzity
+https://blazor-university.com/
+
+### Blazor School
+https://blazorschool.com/
+https://github.com/Blazor-School
+
+## MS Dev Blogs
+
+https://devblogs.microsoft.com
+
+### ASP.NET Core updates in .NET 8 Release Candidate 1
+
+https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#blazor
+
+## Blazor devs
+
+### Daniel Roth: Product Manager at Microsoft for Blazor
+https://twitter.com/danroth27
+https://github.com/danroth27
+https://devblogs.microsoft.com/dotnet/author/danroth27/ - dotnet release/updates
+
+### David Fowler: Distinguished Engineer 🧐 at Microsoft on the ASP.NET team, Creator of SignalR
+https://twitter.com/davidfowl
+https://github.com/davidfowl
+
+### Steve Sanderson
+https://twitter.com/stevensanderson
+(blazor fragments : https://twitter.com/stevensanderson/status/1696449142573113542 )
+
+### Jimmy Engström #Blazor
+https://engstromjimmy.com/
+
