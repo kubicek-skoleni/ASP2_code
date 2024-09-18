@@ -26,6 +26,22 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//app.MapGet("/seed", (PeopleDataset ds, PeopleDbContext db) =>
+//{
+//    try
+//    {
+//        var people = ds.GetPeople();
+//        db.People.AddRange(people);
+//        db.SaveChanges();
+//        return "ok";
+//    }
+//    catch(Exception ex)
+//    {
+//        return ex.Message;
+//    }
+
+//});
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
