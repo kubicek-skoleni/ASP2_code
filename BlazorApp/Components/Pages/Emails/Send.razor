@@ -1,5 +1,7 @@
 ﻿@page "/email/send"
 
+@inject PeopleDbContext db
+
 <h3>Fronta na pozadí</h3>
 
 ﻿<div class="row g-3 align-items-center">
@@ -16,12 +18,36 @@
     </div>
 </div>
 
+﻿<div class="row g-3 align-items-center">
+    @Message
+</div>
+
 @code {
     string Email = "";
 
+    string Message = "";
+
     void send()
     {
-        
+        // is valid email??
+
+        var email = new Email()
+            {
+                Id = 0,
+                SendTo = Email,
+                Submitted = DateTime.Now,
+                Processed = null,
+            };
+
+        try
+        {
+            db.Emails.Add(email);
+            db.SaveChanges();
+            Message = $"přijato ke zpracování - {Email}";
+        }
+        catch(Exception ex)
+        {
+            Message = $"chyba: {ex.Message}";
+        }
     }
 }
-    
