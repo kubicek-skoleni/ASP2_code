@@ -54,3 +54,22 @@ https://devblogs.microsoft.com
 ### ASP.NET Core updates in .NET 8 Release Candidate 1
 
 https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-dotnet-8-rc-1/#blazor
+
+## Blazor devs
+
+### Daniel Roth: Product Manager at Microsoft for Blazor
+https://twitter.com/danroth27
+https://github.com/danroth27
+https://devblogs.microsoft.com/dotnet/author/danroth27/ - dotnet release/updates
+
+### David Fowler: Distinguished Engineer 🧐 at Microsoft on the ASP.NET team, Creator of SignalR
+https://twitter.com/davidfowl
+https://github.com/davidfowl
+
+### Steve Sanderson
+https://twitter.com/stevensanderson
+(blazor fragments : https://twitter.com/stevensanderson/status/1696449142573113542 )
+
+### Jimmy Engström #Blazor
+https://engstromjimmy.com/
+
