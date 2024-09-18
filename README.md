@@ -69,6 +69,10 @@ https://devblogs.microsoft.com/dotnet/author/danroth27/ - dotnet release/updates
 https://twitter.com/davidfowl
 https://github.com/davidfowl
 
+
+### Background tasks
+* https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-8.0&tabs=visual-studio
+
 ### Steve Sanderson
 https://twitter.com/stevensanderson
 (blazor fragments : https://twitter.com/stevensanderson/status/1696449142573113542 )
