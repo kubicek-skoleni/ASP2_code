@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BlazorApp.Model
 {
@@ -7,18 +8,23 @@ namespace BlazorApp.Model
     {
         public int Id { get; set; }
 
-        [MaxLength(10)]
+        [MaxLength(100)]
         public string FirstName { get; set; }
 
-        [MaxLength(10)]
+        [MaxLength(100)]
         public string LastName { get; set; }
 
         [EmailAddress(ErrorMessage = "Neplatný email.")]
          
         public string Email { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public Address Address { get; set; }
-        public List<Contract> Contracts { get; set; }
+                
+        public Address? Address { get; set; }
+
+        [NotMapped]
+        public string AdressAsString { get => $""; }
+
+        public ICollection<Contract> Contracts { get; set; } = new HashSet<Contract>();
 
         public override string ToString()
         {

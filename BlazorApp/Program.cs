@@ -1,11 +1,16 @@
 using BlazorApp.Components;
 using BlazorApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddDbContext<PeopleDbContext>(options =>
+    options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=aspnet-blazorapp;Trusted_Connection=True;MultipleActiveResultSets=true"));
+
 
 builder.Services.AddScoped<CounterService>();
 
