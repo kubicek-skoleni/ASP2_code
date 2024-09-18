@@ -1,0 +1,28 @@
+﻿@page "/email/send"
+
+<h3>Fronta na pozadí</h3>
+
+﻿<div class="row g-3 align-items-center">
+    <div class="col-auto">
+        <label class="col-form-label">Pošli email na adresu</label>
+    </div>
+    <div class="col-auto">
+        <InputText @bind-Value="Email" class="form-control" />
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" @onclick="send">
+            Hledej
+        </button>
+    </div>
+</div>
+
+@code {
+    string Email = "";
+
+
+    void send()
+    {
+        
+    }
+}
+    
