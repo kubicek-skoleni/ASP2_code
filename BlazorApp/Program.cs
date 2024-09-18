@@ -11,6 +11,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDbContext<PeopleDbContext>(options =>
     options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=aspnet-blazorapp;Trusted_Connection=True;MultipleActiveResultSets=true"));
 
+builder.Services.AddControllers();
 
 builder.Services.AddScoped<CounterService>();
 
@@ -45,7 +46,12 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+
+app.UseRouting();
+
 app.UseAntiforgery();
+
+app.MapControllers();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
